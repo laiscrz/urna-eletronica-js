@@ -1,29 +1,24 @@
-html,
-body {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    border: 0;
-    margin: 0;
+html, body{
+    width:100%;height:100%;
+    padding:0;border:0;margin:0;
     background: #C1CFEC;
     font-family: arial;
 }
 
-.flex {
+.flex{
     display: flex;
 }
 
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+        -webkit-appearance: none;
+       margin: 0;
 }
 
-input {
+input{
     outline: none;
     height: 25px
 }
-
-.main {
+.main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -31,15 +26,16 @@ input {
     height: 100%;
 }
 
-.tela,
-.teclado {
-    height: 400px;
+.urna{
+    max-width:1100px;
+}
+.tela, .teclado{
+    height:400px;
     margin: 20px;
     background: white;
 }
 
-
-.tela {
+.tela{
     flex: 8;
     padding: 40px;
     box-sizing: border-box;
@@ -48,22 +44,79 @@ input {
     justify-content: space-between;
 }
 
-.input-foto {
+.input-foto{
     justify-content: space-between
 }
 
-.foto-nome {
+.foto-nome{
     flex-direction: column;
     align-items: center
 }
 
-.foto-nome img {
+.foto-nome img{
     margin: 0 0 10px 0;
 }
 
-.info {
+.info{
     justify-content: center;
     height: 60px;
     border-top: 0.5px solid #ddd;
+    
+}
 
+.teclado{
+    flex: 5;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.numeros{
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+button, .teclado div:nth-child(2) input{
+    width: 75px;
+    height: 47px;
+    background-color: #15181C;
+    text-align: left;
+    color: #ddd;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.numeros button{
+    font-size:30px;
+}
+
+.teclado div:nth-child(2){
+    display: flex;
+    justify-content: center
+}
+
+.teclado div:nth-child(2) button, .teclado div:nth-child(2) input{
+    flex: 1;
+    display: flex;
+    height: 61px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #181818;
+}
+
+.teclado div:nth-child(2) button:nth-child(1){
+    background:#fff;
+    border: .5px solid #ddd;
+}
+
+.teclado div:nth-child(2) button:nth-child(2){
+    background:#F58952;
+}
+
+.teclado div:nth-child(2) input{
+    background: #2BB162;
 }
