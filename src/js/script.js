@@ -34,4 +34,25 @@ document.addEventListener('click', function(e) {
     // Seleciona elementos de imagem e de nome do candidato
     let foto_candidato = document.querySelector('img');
     let nome_candidato = document.querySelector('#nome');
+
+    // Função para atribuir a imagem e o nome do candidato selecionado
+    function source_candidato(num_candidato) {
+        foto_candidato.src = candidatos[num_candidato]['src'];
+        nome_candidato.innerHTML = candidatos[num_candidato]['nome'];
+        document.getElementsByTagName('h1')[0].innerHTML = candidatos[num_candidato]['msg'];
+    }
+
+    // BRANCO
+    // Se o botão clicado for para votar em branco
+    if (e.target.dataset.value == 'branco') {
+        input_candidato.value = "00"; // Define o valor do input como "00"
+        return source_candidato('branco'); // Atualiza a imagem e o nome do candidato como branco
+    }
+
+    // CORRIGE - LIMPAR
+    // Se o botão clicado for para corrigir o voto
+    if (e.target.dataset.value == 'corrige') {
+        input_candidato.value = ""; // Limpa o valor do input
+        return source_candidato('corrige'); // Atualiza a imagem e o nome do candidato como voto corrigido
+    }
 });
