@@ -1,5 +1,4 @@
-document.addEventListener('click', function(e) {
-    let input_candidato = document.getElementsByName('nNum')[0];
+let input_candidato = document.getElementsByName('nNum')[0];
 
     let candidatos = {
         11: {
@@ -28,6 +27,8 @@ document.addEventListener('click', function(e) {
             msg: 'CONFIRME A ESCOLHA'
         }
     }
+
+document.addEventListener('click', function(e) {
 
     let foto_candidato = document.querySelector('img');
     let nome_candidato = document.querySelector('#nome');
@@ -64,4 +65,22 @@ document.addEventListener('click', function(e) {
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault(); 
 
+});
+
+// Adicionando um evento de clique ao botão "CONFIRMA"
+document.querySelector('input[type="submit"]').addEventListener('click', function() {
+    let candidatoSelecionado = input_candidato.value;
+
+    // Verifica se o candidato selecionado é branco
+    if (candidatoSelecionado === "00") {
+        alert("Você optou por votar em branco. Voto enviado com sucesso!");
+    } 
+    // Verifica se o candidato selecionado existe no objeto de candidatos
+    else if (candidatos[candidatoSelecionado]) {
+        alert("Voto enviado com sucesso!");
+    } 
+    // Se não for branco nem um candidato válido, exibe mensagem de voto inválido
+    else {
+        alert("Voto inválido! Candidato não encontrado.")
+    }
 });
