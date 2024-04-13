@@ -1,55 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vote Agora</title>
-    <link rel="shortcut icon" href="src/assets/icons/vote-favicon-svg.svg" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vote Agora</title>
+	<link rel="shortcut icon" href="src/assets/icons/vote-favicon-svg.svg" type="image/x-icon">
+	<link rel="stylesheet" href="src/css/styles.css">
 </head>
 
 <body>
-    <div class="main flex">
-        <div>Nº título <input type="number" name="nTitEleitor" /></div>
-        <form class="flex urna">
-            <div class="tela flex">
-                <div class="input-foto flex">
-                    <div>
-                        <h3>PRESIDENTE</h3>
-                        <input type="number" name="nNum" />
-                    </div>
-                    <div class="flex foto-nome">
-                        <img src="src/assets/profile-candidatos/candidato.jpg" width="150px" />
-                        <div id="nome"></div>
-                    </div>
-                </div>                
-                <div class="info flex">
-                    <h1>CONFIRMA SEU VOTO</h1>
-                </div>
-            </div>
-            <div class="teclado flex">
-                <div class="numeros flex">
-                    <button data-value="1">1</button>
-                    <button data-value="2">2</button>
-                    <button data-value="3">3</button>
-                    <button data-value="4">4</button>
-                    <button data-value="5">5</button>
-                    <button data-value="6">6</button>
-                    <button data-value="7">7</button>
-                    <button data-value="8">8</button>
-                    <button data-value="9">9</button>
-                    <button data-value="0">0</button>
-                </div>
-                <div>
-                    <button data-value="branco">BRANCO</button>
-                    <button data-value="corrige">CORRIGE</button>
-                    <input type="submit" value="CONFIRMA"/>
-                </div>
-            </div>
-        </form>
-    </div>
-    <script src="src/js/script.js" type="javascript"></script>
+	<div class="main flex">
+		<div>Nº título <input type="number" name="nTitEleitor" /></div>
+		<form class="flex urna">
+			<div class="tela flex">
+				<div class="input-foto flex">
+					<div>
+						<h3>PRESIDENTE</h3>
+						<input type="number" name="nNum" />
+					</div>
+					<div class="flex foto-nome">
+						<img src="src/assets/profile-candidatos/candidato.jpg" width="150px" />
+						<div id="nome"></div>
+					</div>
+				</div>
+
+				<div class="info flex">
+					<h1>CONFIRMA SEU VOTO</h1>
+				</div>
+			</div>
+			<div class="teclado flex">
+				<div class="numeros flex">
+					<button data-value="1">1</button>
+					<button data-value="2">2</button>
+					<button data-value="3">3</button>
+					<button data-value="4">4</button>
+					<button data-value="5">5</button>
+					<button data-value="6">6</button>
+					<button data-value="7">7</button>
+					<button data-value="8">8</button>
+					<button data-value="9">9</button>
+					<button data-value="0">0</button>
+				</div>
+				<div>
+					<button data-value="branco">BRANCO</button>
+					<button data-value="corrige">CORRIGE</button>
+					<input type="submit" value="CONFIRMA" />
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="src/js/script.js"></script>
 </body>
 
 </html>
